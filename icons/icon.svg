@@ -1,0 +1,30 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- background -->
+  <rect x="0" y="0" width="512" height="512" rx="96" fill="#F8F2E8"/>
+
+  <!-- steam -->
+  <g fill="none" stroke="#838966" stroke-width="20" stroke-linecap="round">
+    <path d="M182 260 C 155 212 205 184 178 132 C 158 94 192 68 174 32"/>
+    <path d="M256 254 C 229 202 281 174 256 120 C 231 76 281 50 258 14"/>
+    <path d="M330 260 C 357 212 307 184 334 132 C 354 94 320 68 338 32"/>
+  </g>
+
+  <!-- bowl foot -->
+  <ellipse cx="256" cy="434" rx="52" ry="13" fill="#9C4E36"/>
+
+  <!-- bowl body -->
+  <path d="M104 296
+           C 104 305 107 314 114 323
+           L 136 386
+           C 148 420 198 444 256 444
+           C 314 444 364 420 376 386
+           L 398 323
+           C 405 314 408 305 408 296
+           Z" fill="#B85C3E"/>
+
+  <!-- bowl interior shadow -->
+  <ellipse cx="256" cy="296" rx="152" ry="38" fill="#8F4530"/>
+
+  <!-- bowl rim -->
+  <ellipse cx="256" cy="296" rx="152" ry="38" fill="none" stroke="#E6DAC5" stroke-width="8"/>
+</svg>

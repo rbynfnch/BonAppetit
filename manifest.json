@@ -1,0 +1,13 @@
+{
+  "name": "Bon Appétit",
+  "short_name": "Bon Appétit",
+  "description": "A weekly meal planner with saved meals, health tags, and a grocery list.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8F2E8",
+  "theme_color": "#F8F2E8",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

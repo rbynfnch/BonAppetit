@@ -6,14 +6,20 @@ thyroid / metabolic tags), and keep a swipe-to-check grocery list.
 
 ## What's in here
 
-- **`index.html`** — the entire app. It's a static file with no build step:
-  React, Babel (for in-browser JSX), Tailwind, and the fonts all load from
-  public CDNs at runtime. This is the only file Netlify needs to serve.
-- **`source/bon-appetit-meal-planner.jsx`** — the plain React source, kept
-  here for reference if you (or Claude) want to keep editing the app later.
-  Netlify doesn't need this file; it's not built or bundled.
+- **`index.html`** — the entire app, precompiled. The JSX has already been
+  turned into plain JavaScript ahead of time and is inlined directly in this
+  file, so the browser never has to transpile anything on the fly. It still
+  loads React and Tailwind from public CDNs at runtime (there's no bundler
+  or server involved), but the actual app code itself runs as-is.
+- **`source/bon-appetit-meal-planner.jsx`** — the plain React/JSX source,
+  kept here for reference if you (or Claude) want to keep editing the app
+  later. This file is not used by the live site at all — `index.html` is
+  self-contained.
 - **`netlify.toml`** — tells Netlify to publish the root folder as-is, with
   no build command.
+- **`favicon.ico`**, **`icons/`**, **`manifest.json`** — the browser-tab icon
+  and the icon used when you "Add to Home Screen" on your phone (a small
+  line-art bowl with steam). `index.html` already links to all of these.
 
 ## Deploying on Netlify
 
@@ -47,7 +53,9 @@ git push -u origin main
   locally vs. opening it at your Netlify URL — they're treated as different
   origins. Once you're using the Netlify URL day to day, your data will
   persist there across visits.
-- **Requires internet:** the app loads React/Tailwind/fonts from CDNs on
-  each load, so it won't work fully offline.
+- **Requires internet:** the app loads React, Tailwind, and fonts from CDNs
+  on each load, so it won't work fully offline. It no longer depends on an
+  in-browser JSX transpiler, though — the app code itself is precompiled and
+  inlined, which is what was causing the earlier stuck-on-loading screen.
 - **No backend:** everything is client-side. There's nothing to configure
   on Netlify beyond the static file hosting above.
